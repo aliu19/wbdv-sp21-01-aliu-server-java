@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        rel="stylesheet">
+  <link href="../profile.style.client.css"
+        rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Profile</h1>
+
+    <div class="alert alert-success" role="alert">
+      Profile successfully saved
+    </div>
+
+    <form>
+      <div class="form-group row">
+        <label for="usernameFld" class="col-sm-2 col-form-label">
+          Username </label>
+        <div class="col-sm-10">
+          <input type="text"
+                 readonly
+                 class="form-control wbdv-field wbdv-username"
+                 id="usernameFld"
+                 value="Alice">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="phoneFld" class="col-sm-2 col-form-label">
+          Phone </label>
+        <div class="col-sm-10">
+          <input type="tel"
+                 class="form-control"
+                 id="phoneFld"
+                 placeholder="555-123-4324">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="emailFld" class="col-sm-2 col-form-label">
+          Email </label>
+        <div class="col-sm-10">
+          <input type="email"
+                 class="form-control"
+                 id="emailFld"
+                 placeholder="alice@wonderland.com">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="roleFld" class="col-sm-2 col-form-label">
+          Role </label>
+        <div class="col-sm-10">
+          <select class="form-control" id="roleFld">
+            <option value="Faculty">Faculty</option>
+            <option value="Student">Student</option>
+            <option value="Staff">Staff</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="dobFld" class="col-sm-2 col-form-label">
+          Date of Birth </label>
+        <div class="col-sm-10">
+          <input type="date"
+                 class="form-control"
+                 id="dobFld"
+                 placeholder="mm/dd/yyyy">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+          <button class="btn btn-success btn-block wbdv-update" id="updateBtn">Update</button>
+          <a class="btn btn-danger btn-block wbdv-logout" id="logoutBtn"
+                  href="../index.html">
+            Logout</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
