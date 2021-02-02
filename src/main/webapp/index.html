@@ -5,11 +5,55 @@
   <title>Home</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         rel="stylesheet".>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"/>
 </head>
 <body>
 
-  <div>
-    <h1>Welcome to WebDev</h1>
+  <div class="container">
+    <h1>Course Manager</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Owned</th>
+          <th>Last Modified</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <i class="fa fa-file"></i>
+            CS5500 Software Engineering Graduate
+          </td>
+          <td>me</td>
+          <td>6:45 PM</td>
+          <td><i class="fa fa-trash"></i></td>
+        </tr>
+        <tr>
+          <td>
+            <i class="fa fa-file"></i>
+            CS4550 Software Engineering Undergraduate
+          </td>
+          <td>me</td>
+          <td>6:45 PM</td>
+          <td><i class="fa fa-trash"></i></td>
+        </tr>
+        <tr>
+          <td>
+            <i class="fa fa-file"></i>
+            CS4500 WebDev Undergraduate
+          </td>
+          <td>me</td>
+          <td>6:45 PM</td>
+          <td><i class="fa fa-trash"></i></td>
+        </tr>
+      </tbody>
+    </table>
+
     <ul>
       <li>
         <a href="login/login.template.client.html">Login</a>
@@ -17,7 +61,14 @@
       <li>
         <a href="register/register.template.client.html">Register</a>
       </li>
+      <li>
+        <a href="profile/profile.template.client.html">Profile</a>
+      </li>
+      <li>
+        <a href="course-editor/course-editor.template.client.html">Editor</a>
+      </li>
     </ul>
+
   </div>
 
 </body>
