@@ -1,0 +1,24 @@
+.wbdv-sticky-navbar {
+  background-color: cornflowerblue;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+  padding-top: 56px;
+}
+
+.wbdv-nav-title {
+  font-weight: bold;
+  color: white;
+  font-size: large;
+}
+
+.wbdv-bottom-right {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+}

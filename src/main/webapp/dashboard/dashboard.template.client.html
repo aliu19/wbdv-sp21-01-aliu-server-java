@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        rel="stylesheet".>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
+  <link href="dashboard.style.client.css"
+        rel="stylesheet">
+</head>
+<body>
+
+<div class="wbdv-sticky-navbar">
+  <div class="row">
+    <div class="col-1">
+      <i class="fa fa-bars fa-2x"></i>
+    </div>
+    <div class="col-2 wbdv-nav-title">
+      Course Manager
+    </div>
+    <div class="col-8">
+      <input type="text"
+             class="form-control"
+             id="searchFld"
+             placeholder="New Course Title">
+    </div>
+    <div class="col-1">
+      <i class="fa fa-plus-circle fa-2x"></i>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th class="d-none d-sm-table-cell">Owned</th>
+      <th class="d-none d-sm-table-cell">Last Modified</th>
+      <th class="d-none d-sm-table-cell">
+        <button class="btn btn-sm" id="gridBtn">
+          <i class="fa fa-th"></i>
+        </button>
+      </th>
+      <th class="d-none d-sm-table-cell">
+        <button class="btn btn-sm" id="sortBtn">
+          <i class="fa fa-sort"></i>
+        </button>
+      </th>
+      <th>&nbsp</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS5500 Software Engineering Graduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS4550 Software Engineering Undergraduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS4500 WebDev Undergraduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS5500 Software Engineering Graduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS4550 Software Engineering Undergraduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+
+    <td colspan="2">
+      <h6>Yesterday</h6>
+    </td>
+
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS5500 Software Engineering Graduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+
+    <td colspan="2">
+      <h6>Previous 7 Days</h6>
+    </td>
+
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS4550 Software Engineering Undergraduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS4500 WebDev Undergraduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS5500 Software Engineering Graduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS4550 Software Engineering Undergraduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS4550 Software Engineering Undergraduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS4500 WebDev Undergraduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS5500 Software Engineering Graduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-file"></i>
+        CS4550 Software Engineering Undergraduate
+      </td>
+      <td class="d-none d-sm-table-cell">me</td>
+      <td class="d-none d-sm-table-cell">6:45 PM</td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td class="d-none d-sm-table-cell"></td>
+      <td><i class="fa fa-trash"></i></td>
+    </tr>
+    </tbody>
+
+  </table>
+
+</div>
+
+<button class="btn wbdv-bottom-right" id="addBtn">
+  <i class="fa fa-plus-circle fa-4x"></i>
+</button>
+
+</body>
+</html>
