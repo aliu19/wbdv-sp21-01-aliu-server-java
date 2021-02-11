@@ -27,11 +27,11 @@
       <th>&nbsp;</th>
     </tr>
 
-    <tr class="wbdv-form">
+    <tr class="wbdv-form" id="wbdv-form">
       <td><input id="usernameFld" class="form-control"
-                 placeholder="Username" /></td>
+                 placeholder="Username"/></td>
       <td><input id="passwordFld" class="form-control"
-                 placeholder="Password" /></td>
+                 placeholder="Password" type="password"/></td>
       <td><input id="firstNameFld" class="form-control"
                  placeholder="First Name" /></td>
       <td><input id="lastNameFld" class="form-control"
@@ -42,20 +42,14 @@
         <option value="ADMIN">Admin</option>
       </select></td>
       <td><span class="pull-right" style="white-space: nowrap">
-      <button class="btn">
-        <i class="fa-2x fa fa-search"></i>
-      </button>
-      <button class="btn">
-        <i class="fa-2x fa fa-plus wbdv-create"></i>
-      </button>
-      <button class="btn">
-        <i class="fa-2x fa fa-check wbdv-update"></i>
-      </button>
+      <button class="btn fa-2x fa fa-search"></button>
+      <button class="btn fa-2x fa fa-plus wbdv-create"></button>
+      <button class="btn fa-2x fa fa-check wbdv-update"></button>
     </span></td>
     </tr>
     </thead>
 
-    <tbody class="wbdv-tbody">
+    <tbody id="userRowTemplate" class="wbdv-tbody">
 
     </tbody>
   </table>
