@@ -3,8 +3,6 @@ var $passwordFld
 var $firstNameFld
 var $lastNameFld
 var $roleFld
-// var $removeBtn
-// var $editBtn
 var $updateBtn
 var $createBtn
 var $userRowTemplate
