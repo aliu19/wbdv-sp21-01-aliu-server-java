@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 public class WidgetService {
   private List<Widget> widgets = new ArrayList<Widget>();
   {
-    Widget w1 = new Widget(123l, "ABC123", "HEADING", 1, "Widgets for Topic ABC123");
-    Widget w2 = new Widget(234l, "ABC123", "PARAGRAPH", 1, "Lorem Ipsum");
+    Widget w1 = new Widget(123l, "607670d5820c72001740e6c2", "HEADING", 1, "Widgets for Topic ABC123");
+    Widget w2 = new Widget(234l, "607670d5820c72001740e6c2", "PARAGRAPH", 1, "Lorem Ipsum");
     Widget w3 = new Widget(345l, "ABC234", "HEADING", 2, "Widgets for Topic ABC234");
     Widget w4 = new Widget(456l, "ABC234", "PARAGRAPH", 1, "Lorem Ipsum");
     Widget w5 = new Widget(567l, "ABC234", "PARAGRAPH", 1, "Lorem Ipsum");
@@ -24,5 +24,15 @@ public class WidgetService {
 
   public List<Widget> findAllWidgets() {
     return widgets;
+  }
+
+  public List<Widget> findWidgetsForTopic(String topicId) {
+    List<Widget> ws = new ArrayList<Widget>();
+    for(Widget w: widgets) {
+      if (w.getTopicId().equals(topicId)) {
+        ws.add(w);
+      }
+    }
+    return ws;
   }
 }
