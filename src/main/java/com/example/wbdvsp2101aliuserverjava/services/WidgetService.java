@@ -53,7 +53,7 @@ public class WidgetService {
         return 1;
       }
     }
-    return -1;
+    return 0;
   }
 
   public Integer updateWidget(Long wid, Widget widget) {
@@ -63,6 +63,6 @@ public class WidgetService {
         return 1;
       }
     }
-    return -1;
+    return 0;
   }
 }
