@@ -2,8 +2,6 @@ package com.example.wbdvsp2101aliuserverjava.services;
 
 import com.example.wbdvsp2101aliuserverjava.models.Widget;
 import com.example.wbdvsp2101aliuserverjava.repositories.WidgetRepository;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,9 +37,55 @@ public class WidgetService {
 
   public Integer updateWidget(Long wid, Widget newWidget) {
     Widget originalWidget = findWidgetById(wid);
-    originalWidget.setText(newWidget.getText());
-    originalWidget.setType(newWidget.getType());
-    originalWidget.setSize(newWidget.getSize());
+
+    if(newWidget.getName() != null) {
+      originalWidget.setName(newWidget.getName());
+    }
+
+    if(newWidget.getText() != null) {
+      originalWidget.setText(newWidget.getText());
+    }
+
+    if(newWidget.getType() != null) {
+      originalWidget.setType(newWidget.getType());
+    }
+
+    if(newWidget.getSize() != null) {
+      originalWidget.setSize(newWidget.getSize());
+    }
+
+    if(newWidget.getWidgetOrder() != null) {
+      originalWidget.setWidgetOrder(newWidget.getWidgetOrder());
+    }
+
+    if(newWidget.getSrc() != null) {
+      originalWidget.setSrc(newWidget.getSrc());
+    }
+
+    if(newWidget.getWidth() != null) {
+      originalWidget.setWidth(newWidget.getWidth());
+    }
+
+    if(newWidget.getHeight() != null) {
+      originalWidget.setHeight(newWidget.getHeight());
+    }
+
+    if(newWidget.getCssClass() != null) {
+      originalWidget.setCssClass(newWidget.getCssClass());
+    }
+
+    if(newWidget.getStyle() != null) {
+      originalWidget.setStyle(newWidget.getStyle());
+    }
+
+    if(newWidget.getValue() != null) {
+      originalWidget.setValue(newWidget.getValue());
+    }
+
+    if(newWidget.getOrdered() != null) {
+      originalWidget.setOrdered(newWidget.getOrdered());
+    }
+
     repository.save(originalWidget);
     return 1;
   }
