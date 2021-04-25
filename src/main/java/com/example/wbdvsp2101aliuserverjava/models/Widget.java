@@ -1,8 +1,20 @@
 package com.example.wbdvsp2101aliuserverjava.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="widgets")
 public class Widget {
-  private String name;
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+
+  private String name;
   private String topicId;
   private String type;
   private Integer size;
@@ -15,11 +27,11 @@ public class Widget {
   private String style;
   private String value;
 
-  public Widget(String name, Long id, String topicId, String type, Integer size,
+  public Widget(Long id, String name, String topicId, String type, Integer size,
       String text, Integer widgetOrder, String src, Integer width, Integer height,
       String cssClass, String style, String value) {
-    this.name = name;
     this.id = id;
+    this.name = name;
     this.topicId = topicId;
     this.type = type;
     this.size = size;

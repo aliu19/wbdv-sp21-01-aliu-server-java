@@ -1,68 +1,48 @@
 package com.example.wbdvsp2101aliuserverjava.services;
 
 import com.example.wbdvsp2101aliuserverjava.models.Widget;
+import com.example.wbdvsp2101aliuserverjava.repositories.WidgetRepository;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class WidgetService {
-  private List<Widget> widgets = new ArrayList<Widget>();
-  {
-    Widget w1 = new Widget(123l, "607670d5820c72001740e6c2", "HEADING", 1, "Widgets for Topic ABC123");
-    Widget w2 = new Widget(234l, "607670d5820c72001740e6c2", "PARAGRAPH", 1, "Lorem Ipsum");
-    Widget w3 = new Widget(345l, "607670f3820c72001740e6c4", "HEADING", 2, "Widgets for Topic ABC234");
-    Widget w4 = new Widget(456l, "607670f3820c72001740e6c4", "PARAGRAPH", 1, "Lorem Ipsum");
-    Widget w5 = new Widget(567l, "607670f3820c72001740e6c4", "PARAGRAPH", 1, "Lorem Ipsum");
 
-    widgets.add(w1);
-    widgets.add(w2);
-    widgets.add(w3);
-    widgets.add(w4);
-    widgets.add(w5);
-  }
+  @Autowired
+  WidgetRepository repository;
 
   public List<Widget> findAllWidgets() {
-    return widgets;
+    return repository.findAllWidgets();
+//    return (List<Widget>) repository.findAll();
   }
 
   public List<Widget> findWidgetsForTopic(String topicId) {
-    List<Widget> ws = new ArrayList<Widget>();
-    for(Widget w: widgets) {
-      if (w.getTopicId().equals(topicId)) {
-        ws.add(w);
-      }
-    }
-    return ws;
+    return repository.findWidgetsForTopic(topicId);
+  }
+
+  public Widget findWidgetById(Long id) {
+    return repository.findWidgetById(id);
+//    return repository.findById(id).get();
   }
 
   public Widget createWidget(String topicId, Widget widget) {
-    widget.setTopicId(topicId);
-    widget.setId((new Date()).getTime());
-    widgets.add(widget);
-    return widget;
+    return repository.save(widget);
   }
 
   public Integer deleteWidget(Long wid) {
-    int index = -1;
-    for(int i = 0; i < widgets.size(); i++) {
-      if(widgets.get(i).getId().equals(wid)) {
-        index = i;
-        widgets.remove(index);
-        return 1;
-      }
-    }
-    return 0;
+    repository.deleteById(wid);
+    return 1;
   }
 
-  public Integer updateWidget(Long wid, Widget widget) {
-    for(int i = 0; i < widgets.size(); i++) {
-      if(widgets.get(i).getId().equals(wid)) {
-        widgets.set(i, widget);
-        return 1;
-      }
-    }
-    return 0;
+  public Integer updateWidget(Long wid, Widget newWidget) {
+    Widget originalWidget = findWidgetById(wid);
+    originalWidget.setText(newWidget.getText());
+    originalWidget.setType(newWidget.getType());
+    originalWidget.setSize(newWidget.getSize());
+    repository.save(originalWidget);
+    return 1;
   }
 }
